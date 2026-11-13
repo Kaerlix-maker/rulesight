@@ -1,0 +1,50 @@
+{
+  "name": "rulesight",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "build:cli": "esbuild src/cli.ts --bundle --platform=node --format=esm --target=node18 --outfile=cli/rulesight.js",
+    "test": "vitest run",
+    "preview": "vite preview",
+    "prepublishOnly": "npm test && npm run build:cli"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "esbuild": "^0.28.2",
+    "typescript": "~7.0.2",
+    "vite": "^8.3.6",
+    "vitest": "^5.1.0"
+  },
+  "description": "Security auditor for Firestore rules \u2014 score, plain-language explanations and fixes. Web app + CLI.",
+  "license": "MIT",
+  "author": "Kaerlix",
+  "keywords": [
+    "firebase",
+    "firestore",
+    "security-rules",
+    "security",
+    "audit",
+    "static-analysis",
+    "cli"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kaerlix-maker/rulesight"
+  },
+  "homepage": "https://kaerlix-maker.github.io/rulesight/",
+  "bin": {
+    "rulesight": "cli/rulesight.js"
+  },
+  "files": [
+    "cli"
+  ]
+}
