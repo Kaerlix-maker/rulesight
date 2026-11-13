@@ -1,0 +1,15 @@
+:root {
+  --bg: #0a0a09; --bg2: #10100e; --card: #161613;
+  --line: rgba(236, 235, 230, .09); --line2: rgba(236, 235, 230, .16);
+  --text: #ecebe6; --muted: #8d8b83; --dim: #5c5a54;
+  --gold: #d8b26e; --gold2: #f1d9a8; --ok: #7bd88f; --crit: #ff6b6b;
+  --serif: 'Instrument Serif', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+em { font-style: italic; }
+::selection { background: var(--gold); color: var(--bg); }
+button:focus-visible, a:focus-visible, textarea:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
